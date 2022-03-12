@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--Pale-blue);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+    }
+    img{
+        width: 100%;
+    }
+   .container p{
+        font-size: 16px;
+        color: var(--Desaturated-blue);
+        line-height: 1.6;
+        padding: 10px 30px;
+    }
+    .container h1{
+        color: var(--Dark-blue);
+        padding: 20px;
+        font-weight: 900;
+    }
+.bg-image{
+    background: url(images/pattern-background-mobile.svg) no-repeat center/cover;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.container{
+    background-color: white;
+    margin: 0 20px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px hsl(223, 47%, 23% 0.15);
+    padding-bottom: 30px;
+    width: 400px;
+}
+.hero{
+    border-radius: 10px 10px 0 0;
+}
+.container .annual-plan{
+    margin: 20px auto;
+    background-color: var(--Very-pale-blue);
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.annual-plan article{
+    display: flex;
+
+}
+.annual-plan img{
+    margin-right: 20px;
+}
+.btn{
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'red-hat-display';
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    
+}
+.container .button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn-change{
+    background-color: transparent;
+    text-decoration: underline;
+    color: var(--Bright-blue);
+}
+.btn-primary{
+    background-color: var(--Bright-blue);
+    color: white;
+    padding: 15px 4rem;
+    margin: 20px 0;
+    
+}
+.btn-secondery{
+    background-color: transparent;
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+.btn-primary:hover, .btn-secondery:hover{
+    opacity: 0.8;
+}
+.btn-secondery:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+
+@media (min-width:786px) {
+    .bg-image{
+        background: url(images/pattern-background-desktop.svg) no-repeat center/cover;
+        height: 50vh;
+    }
+}
